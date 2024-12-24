@@ -1,0 +1,22 @@
+.cast-maincont {
+  list-style-type: none;
+  width: 110px;
+  margin: 8px;
+}
+.cast-profileimg {
+  width: 110px;
+  height: 120px;
+  border-radius: 8px;
+}
+.cast-mainname {
+  font-family: 'Roboto';
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: black;
+}
+.cast-chrname {
+  color: rgb(171, 168, 168);
+  font-weight: 450;
+  font-family: 'Roboto';
+  font-size: 0.9rem;
+}

@@ -1,0 +1,66 @@
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  list-style-type: none;
+  width: 120px;
+}
+@media (min-width: 930px) {
+  .movie-card {
+    width: 160px;
+  }
+}
+.card-movieimage {
+  border-radius: 7px;
+  width: 120px;
+  height: 150px;
+}
+@media (min-width: 930px) {
+  .card-movieimage {
+    width: 160px;
+    height: 150px;
+  }
+}
+.card-moviename {
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 1rem;
+  color: black;
+  margin: 2px 0px 0px 0px;
+  min-height: 50px;
+}
+@media (min-width: 930px) {
+  .card-moviename {
+    font-size: 1.1rem;
+  }
+}
+.card-rating {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.card-movierating {
+  color: rgb(149, 147, 147);
+  font-weight: bold;
+  font-family: 'Roboto';
+  font-size: 0.9rem;
+  display: inline-block;
+  margin: 0px 0px 5px 5px;
+}
+.card-viewbtn {
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  border-width: 0;
+  height: 28px;
+  margin: 2px 0;
+  width: 120px;
+}
+@media (min-width: 930px) {
+  .card-viewbtn {
+    width: 160px;
+    height: 32px;
+  }
+}

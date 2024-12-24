@@ -1,0 +1,101 @@
+.single-maincont {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: white;
+}
+.single-imgcont {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.single-movieimg {
+  width: 70%;
+}
+@media (min-width: 930px){
+  .single-movieimg{
+    height: 400px;
+    width: 400px;
+  }
+}
+.single-moviedesc {
+  font-family: 'Roboto';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.single-title {
+  color: rgb(159, 158, 158);
+  font-size: 0.9rem;
+  margin: 0;
+  margin-top: 5px;
+}
+@media (min-width: 930px){
+  .single-title{
+    font-size: 1.1rem;
+  }
+}
+.single-moviename {
+  color: black;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0;
+}
+@media (min-width: 930px){
+  .single-moviename{
+    font-size: 1.8rem;
+  }
+}
+.single-rating {
+  display: flex;
+  margin: 0;
+}
+.rating-contsingle {
+  display: flex;
+  align-items: center;
+  margin: 0px 0px 0px 10px;
+}
+.single-ratinganswer {
+  color: black;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin: 5px 0px 0px 5px;
+}
+@media (min-width: 930px){
+  .single-ratinganswer{
+    font-size: 1.1rem;
+  }
+}
+.single-answer {
+  color: black;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding-left: 8px;
+  margin: 0;
+  margin-top: 5px;
+}
+@media (min-width: 930px){
+  .single-answer{
+    font-size: 1.1rem;
+  }
+}
+.single-arranger {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.overview-cont {
+  align-self: flex-start;
+  padding: 8px;
+}
+.single-overview {
+  color: rgb(4, 4, 123);
+  font-family: 'Roboto';
+  font-size: 1rem;
+  font-weight: bold;
+}
+@media (min-width: 930px){
+  .single-overview{
+    font-size: 1.4rem;
+  }
+}
