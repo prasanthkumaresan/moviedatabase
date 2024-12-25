@@ -2,9 +2,13 @@
   padding: 10px;
   background-color: rgb(7, 7, 90);
   width: 100vw;
+  position: sticky;
+  top: 0;
 }
 @media (min-width: 690px) {
-  padding: 5px 28px 5px 28px;
+  .nav-maincont {
+    padding: 8px 28px 8px 28px;
+  }
 }
 .nav-mainel {
   display: flex;
@@ -59,6 +63,11 @@
   display: flex;
   height: 35px;
 }
+@media (min-width: 690px) {
+  .navsearch-cont {
+    display: none;
+  }
+}
 .nav-input {
   width: 100%;
   padding: 8px 10px 8px 6px;
@@ -92,6 +101,7 @@
   border-radius: 7px;
   margin: 0;
   max-width: 250px;
+  height: 32px;
 }
 .maxnav-input {
   max-width: 110px;
@@ -112,6 +122,17 @@
 }
 @media (max-width: 690px) {
   .maxsearch-cont {
+    display: none;
+  }
+}
+.active-link {
+  background-color: rgb(183, 178, 178);
+  border-radius: 6px;
+  padding: 8px;
+  font-weight: bold;
+}
+@media (min-width: 690px) {
+  .nav-responsive {
     display: none;
   }
 }

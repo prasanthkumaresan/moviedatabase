@@ -2,10 +2,11 @@ import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import Navbar from '../Navbar/navbar'
 import MovieCard from '../MovieCard/movie'
+import Pagination from '../Pagination/num'
 import './top.css'
 
 class TopRated extends Component {
-  state = {toplist: [], isLoading: true}
+  state = {toplist: [], isLoading: true, currentPage: 1}
 
   componentDidMount() {
     this.getData()
@@ -32,20 +33,34 @@ class TopRated extends Component {
     </div>
   )
 
+  currentPgsetter = val => {
+    this.setState({currentPage: val})
+  }
+
   render() {
-    const {toplist, isLoading} = this.state
+    const {toplist, isLoading, currentPage} = this.state
+    const elPerPage = 6
+    const startIndex = elPerPage * (currentPage - 1)
+    const endIndex = startIndex + elPerPage
+    const slicedList = toplist.slice(startIndex, endIndex)
     return (
       <>
         {isLoading && this.renderLoader()}
         {!isLoading && (
           <>
-            <Navbar />
+            <Navbar current="toprated" />
             <h1 className="pop-header">Top Rated</h1>
             <ul className="movie-ul">
-              {toplist.map(each => (
+              {slicedList.map(each => (
                 <MovieCard key={each.id} movies={each} />
               ))}
             </ul>
+            <Pagination
+              currentPgsetter={this.currentPgsetter}
+              renderList={toplist}
+              elPerPage={elPerPage}
+              currentPage={currentPage}
+            />
           </>
         )}
       </>

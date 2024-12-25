@@ -2,10 +2,11 @@ import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import Navbar from '../Navbar/navbar'
 import MovieCard from '../MovieCard/movie'
+import Pagination from '../Pagination/num'
 import './popular.css'
 
 class PopMovies extends Component {
-  state = {poplist: [], isLoading: true}
+  state = {poplist: [], isLoading: true, currentPage: 1}
 
   componentDidMount() {
     this.getData()
@@ -32,20 +33,34 @@ class PopMovies extends Component {
     </div>
   )
 
+  currentPgsetter = val => {
+    this.setState({currentPage: val})
+  }
+
   render() {
-    const {poplist, isLoading} = this.state
+    const {poplist, isLoading, currentPage} = this.state
+    const elPerPage = 6
+    const startIndex = elPerPage * (currentPage - 1)
+    const endIndex = startIndex + elPerPage
+    const slicedList = poplist.slice(startIndex, endIndex)
     return (
       <>
         {isLoading && this.renderLoader()}
         {!isLoading && (
           <>
-            <Navbar />
+            <Navbar current="popular" />
             <h1 className="pop-header">Popular movies</h1>
             <ul className="movie-ul">
-              {poplist.map(each => (
+              {slicedList.map(each => (
                 <MovieCard key={each.id} movies={each} />
               ))}
             </ul>
+            <Pagination
+              currentPgsetter={this.currentPgsetter}
+              renderList={poplist}
+              elPerPage={elPerPage}
+              currentPage={currentPage}
+            />
           </>
         )}
       </>

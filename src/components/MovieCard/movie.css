@@ -5,9 +5,10 @@
   list-style-type: none;
   width: 120px;
 }
-@media (min-width: 930px) {
+@media (min-width: 630px) {
   .movie-card {
-    width: 160px;
+    width: 220px;
+    margin: 10px 10px;
   }
 }
 .card-movieimage {
@@ -15,10 +16,11 @@
   width: 120px;
   height: 150px;
 }
-@media (min-width: 930px) {
+@media (min-width: 630px) {
   .card-movieimage {
-    width: 160px;
-    height: 150px;
+    width: 220px;
+    height: 220px;
+    max-width: 100%;
   }
 }
 .card-moviename {
@@ -28,8 +30,9 @@
   color: black;
   margin: 2px 0px 0px 0px;
   min-height: 50px;
+  padding-top: 5px;
 }
-@media (min-width: 930px) {
+@media (min-width: 630px) {
   .card-moviename {
     font-size: 1.1rem;
   }
@@ -58,9 +61,9 @@
   margin: 2px 0;
   width: 120px;
 }
-@media (min-width: 930px) {
+@media (min-width: 630px) {
   .card-viewbtn {
-    width: 160px;
+    width: 220px;
     height: 32px;
   }
 }
