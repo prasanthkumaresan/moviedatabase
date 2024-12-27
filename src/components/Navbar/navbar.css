@@ -98,7 +98,7 @@
 .maxsearch-cont {
   display: flex;
   background-color: white;
-  border-radius: 7px;
+  border-radius: 10px;
   margin: 0;
   max-width: 250px;
   height: 32px;
@@ -117,8 +117,8 @@
   border: none;
   height: 100%;
   outline: none;
-  border-bottom-right-radius: 7px;
-  border-top-right-radius: 7px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
 }
 @media (max-width: 690px) {
   .maxsearch-cont {
@@ -127,8 +127,8 @@
 }
 .active-link {
   background-color: rgb(183, 178, 178);
-  border-radius: 6px;
-  padding: 8px;
+  border-radius: 12px;
+  padding: 6px;
   font-weight: bold;
 }
 @media (min-width: 690px) {

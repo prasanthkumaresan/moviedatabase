@@ -7,8 +7,8 @@
 }
 @media (min-width: 630px) {
   .movie-card {
-    width: 220px;
-    margin: 10px 10px;
+    width: 280px;
+    margin: 10px 20px;
   }
 }
 .card-movieimage {
@@ -18,8 +18,8 @@
 }
 @media (min-width: 630px) {
   .card-movieimage {
-    width: 220px;
-    height: 220px;
+    width: 280px;
+    height: 280px;
     max-width: 100%;
   }
 }
@@ -63,7 +63,7 @@
 }
 @media (min-width: 630px) {
   .card-viewbtn {
-    width: 220px;
+    width: 280px;
     height: 32px;
   }
 }
